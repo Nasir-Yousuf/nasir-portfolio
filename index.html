@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nasir Yousuf® — Next.js Developer, AI Technologist & Creative</title>
+  <meta name="description" content="Portfolio of Nasir Yousuf — Next.js Developer, AI Technologist, and Video Editor. Exploring cutting-edge AI systems, clean web architectures, and high-retention digital media." />
+  
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Nasir Yousuf — Next.js Developer & AI Technologist" />
+  <meta property="og:description" content="A clearer vision for modern web & AI. Combining artificial intelligence, clean web architecture, and storytelling." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="image/profile.jpg" />
+
+  <!-- Google Fonts: Instrument Serif + Plus Jakarta Sans + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient Top Glow Light -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Outer Browser / App Frame Container -->
+  <div class="app-frame">
+
+    <!-- -----------------------------------------------------------------------
+         HEADER NAVIGATION (Mindly-Style Floating Pill Bar)
+         ----------------------------------------------------------------------- -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Logo: Exact match "NASIR." -->
+        <a href="#home" class="brand-logo" aria-label="Nasir Home">
+          NASIR.
+        </a>
+
+        <!-- Center Nav Pill Capsule -->
+        <nav class="nav-capsule" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+          <!-- Dark/Light Theme Toggle -->
+          <button id="theme-toggle-btn" class="btn-icon-toggle" aria-label="Toggle color theme" title="Toggle theme">
+            <span id="theme-toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </span>
+          </button>
+
+          <!-- Primary Black Pill CTA ("Let's Talk ↗") -->
+          <a href="#contact" class="btn-primary">
+            <span>Let's Talk</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Open navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- -----------------------------------------------------------------------
+         HERO SECTION (Exact Twin of Reference Design Image 2)
+         ----------------------------------------------------------------------- -->
+    <section id="home" class="hero-section">
+      <div class="container">
+
+        <!-- Hero Headline in Instrument Serif (Exact match) -->
+        <h1 class="hero-title">
+          Creative mind,
+          <span class="italic-line">building a digital future.</span>
+        </h1>
+
+        <!-- Hero Subtitle (Exact match) -->
+        <p class="hero-subtitle">
+          I'm Nasir. A video creator and web developer passionate about turning ideas into meaningful digital experiences.
+        </p>
+
+        <!-- CTA Buttons (Exact match) -->
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">
+            <span>Explore My Work</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#about" class="btn-secondary">
+            <span class="btn-play-circle">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </span>
+            <span>Get to Know Me</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left: -2px;">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Hero Visual Stage: Central Portrait + 5 Floating Cards + Connecting Lines -->
+        <div class="hero-visual-stage" id="hero-visual-stage">
+          
+          <!-- SVG Connecting Wires Canvas -->
+          <svg class="connecting-wires-svg" aria-hidden="true">
+            <path id="wire-1" class="wire-path" d="" />
+            <path id="wire-2" class="wire-path" d="" />
+            <path id="wire-3" class="wire-path" d="" />
+            <path id="wire-4" class="wire-path" d="" />
+            <path id="wire-5" class="wire-path" d="" />
+          </svg>
+
+          <!-- Top-Right Rotating Stamp Badge ("CREATIVE • CURIOUS • ALWAYS BUILDING •") -->
+          <div class="rotating-stamp-badge" title="Creative • Curious • Always Building">
+            <svg class="stamp-rotating-text" viewBox="0 0 100 100">
+              <defs>
+                <path id="circlePath" d="M 50, 14 a 36,36 0 1,1 -0.1,0" fill="none" />
+              </defs>
+              <text>
+                <textPath href="#circlePath" startOffset="0%">
+                  • CREATIVE • CURIOUS • ALWAYS BUILDING •
+                </textPath>
+              </text>
+            </svg>
+            <div class="stamp-center-star">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"></polygon>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 1: Video Editing (Top Left) -->
+          <div class="hero-card-floating card-video" id="card-video">
+            <div class="floating-card-icon icon-video">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+            <h4>Video Editing</h4>
+            <p>Turning raw footage into compelling stories.</p>
+          </div>
+
+          <!-- Card 2: Web Development (Bottom Left) -->
+          <div class="hero-card-floating card-web" id="card-web">
+            <div class="floating-card-icon icon-web">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h4>Web Development</h4>
+            <p>Building functional and meaningful digital experiences.</p>
+          </div>
+
+          <!-- Central Portrait with Soft Vignette Bottom Fade -->
+          <div class="central-portrait-wrapper" title="Click to toggle B&amp;W / Color">
+            <img src="image/nasir-portrait-bw.png" alt="Nasir Portrait" class="portrait-photo" id="hero-portrait" />
+          </div>
+
+          <!-- Card 3: Creative Thinking (Top Right) -->
+          <div class="hero-card-floating card-creative" id="card-creative">
+            <div class="floating-card-icon icon-creative">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18h6"></path>
+                <path d="M10 22h4"></path>
+                <path d="M12 2a7 7 0 0 0-7 7c0 2.5 1.5 4.5 3 5.5v1.5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V16c1.5-1 3-3 3-5.5a7 7 0 0 0-7-7z"></path>
+              </svg>
+            </div>
+            <h4>Creative Thinking</h4>
+            <p>Exploring ideas and finding better ways to build.</p>
+          </div>
+
+          <!-- Card 4: Selected Projects (Middle Right) -->
+          <div class="hero-card-floating card-projects" id="card-projects">
+            <div class="floating-card-icon icon-projects">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h4>Selected Projects</h4>
+            <p>Ideas transformed into real-world applications.</p>
+          </div>
+
+          <!-- Card 5: Let's Collaborate (Bottom Right) -->
+          <div class="hero-card-floating card-collab" id="card-collab">
+            <div class="floating-card-icon icon-collab">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h4>Let's Collaborate</h4>
+            <p>Open to interesting projects and opportunities.</p>
+          </div>
+
+          <!-- Bottom-Left Editorial ("Creating with purpose. Videos. Web. Ideas.") -->
+          <div class="editorial-purpose-badge">
+            <div class="purpose-dash">—</div>
+            <h5 class="purpose-title">Creating with purpose.</h5>
+            <p class="purpose-sub">Videos. Web. Ideas.</p>
+          </div>
+
+          <!-- Bottom-Right Editorial Accent ("— Less noise. More creativity.") -->
+          <div class="editorial-accent">
+            <span class="accent-star">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"></polygon>
+              </svg>
+            </span>
+            <span class="accent-line-1">Less noise.</span>
+            <span class="accent-line-2">More creativity.</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 01: ABOUT ME & THE JOURNEY
+         ----------------------------------------------------------------------- -->
+    <section id="about" class="content-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-pill-tag">01 / The Journey</div>
+          <h2 class="section-title">
+            Lifelong curiosity, <span class="italic-accent">crafted into code.</span>
+          </h2>
+          <p class="section-desc">
+            Approaching technology through the intersection of clean software architecture, artificial intelligence, and cinematic storytelling.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Primary Bio Card -->
+          <div class="about-card-primary">
+            <h3>Bridging engineering precision with creative narrative.</h3>
+            
+            <p class="about-bio-text">
+              I’m a Web Developer and Video Editor who enjoys combining technology, creativity, and storytelling to build meaningful digital experiences. My background spans web development, AI, video production, digital marketing, and English literature, allowing me to approach problems from both technical and creative perspectives.
+            </p>
+            
+            <p class="about-bio-text">
+              I’m naturally curious about how things work, from React’s rendering process to how large language models generate text. Whether I’m developing a web application, editing a commercial, or exploring new AI tools, I enjoy turning ideas into practical solutions that people find useful.
+            </p>
+
+            <div class="editorial-quote-box">
+              <p>“The ability to learn is more valuable than any single skill.”</p>
+            </div>
+
+            <p class="about-bio-text">
+              I believe the best professionals are lifelong learners. That’s why I’m constantly expanding my skills, experimenting with new technologies, and challenging myself to grow across different disciplines while always focusing on creating real value.
+            </p>
+          </div>
+
+          <!-- Sidebar: Reading & Growth Pillars -->
+          <div class="about-sidebar">
+            
+            <!-- Currently Reading -->
+            <div class="reading-card">
+              <div class="sidebar-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span>Currently Reading</span>
+              </div>
+
+              <div class="book-item">
+                <div class="book-icon">📖</div>
+                <div class="book-details">
+                  <h5>Atomic Habits</h5>
+                  <p>Building resilient, repeatable systems for long-term compounding growth and creative consistency.</p>
+                </div>
+              </div>
+
+              <div class="book-item">
+                <div class="book-icon">🧠</div>
+                <div class="book-details">
+                  <h5>The Laws of Human Nature</h5>
+                  <p>Understanding cognitive biases, decision-making dynamics, empathy, and strategic communication.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Currently Growing In (4-matrix) -->
+            <div class="reading-card">
+              <div class="sidebar-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"></polygon>
+                </svg>
+                <span>Currently Growing In</span>
+              </div>
+
+              <div class="growth-grid">
+                <div class="growth-pill-card">
+                  <h6>Modern Web Dev</h6>
+                  <p>Scalable web apps with React &amp; Next.js server actions.</p>
+                </div>
+                <div class="growth-pill-card">
+                  <h6>Artificial Intelligence</h6>
+                  <p>Exploring LLMs, AI agents, and practical API workflows.</p>
+                </div>
+                <div class="growth-pill-card">
+                  <h6>Visual Storytelling</h6>
+                  <p>Pacing, motion design, and high-retention audience flow.</p>
+                </div>
+                <div class="growth-pill-card">
+                  <h6>Strategy &amp; Game Theory</h6>
+                  <p>Narrative structure, psychology, and tactical decision-making.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 02: CORE SKILLS ARSENAL
+         ----------------------------------------------------------------------- -->
+    <section id="skills" class="content-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-pill-tag">02 / Core Skills</div>
+          <h2 class="section-title">
+            A Multidisciplinary Toolkit <span class="italic-accent">forged by practice.</span>
+          </h2>
+          <p class="section-desc">
+            A comprehensive skillset built through production applications, client engagements, and continuous technical exploration.
+          </p>
+        </div>
+
+        <div class="skills-container">
+          
+          <!-- Pillar 1: Development -->
+          <div class="skill-pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h4>Development</h4>
+              <p>Building responsive, full-stack web applications with modern JavaScript technologies and robust architecture.</p>
+            </div>
+            <div class="tags-cluster">
+              <span class="tag-pill">React</span>
+              <span class="tag-pill">Next.js</span>
+              <span class="tag-pill">JavaScript</span>
+              <span class="tag-pill">HTML5</span>
+              <span class="tag-pill">CSS3</span>
+              <span class="tag-pill">Tailwind CSS</span>
+              <span class="tag-pill">Firebase</span>
+              <span class="tag-pill">Git &amp; GitHub</span>
+              <span class="tag-pill">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Generative AI -->
+          <div class="skill-pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                </svg>
+              </div>
+              <h4>Generative AI</h4>
+              <p>Exploring AI-powered software, prompt engineering, and practical intelligent workflows for real applications.</p>
+            </div>
+            <div class="tags-cluster">
+              <span class="tag-pill">Prompt Engineering</span>
+              <span class="tag-pill">Python</span>
+              <span class="tag-pill">LLM Fundamentals</span>
+              <span class="tag-pill">AI-Assisted Dev</span>
+              <span class="tag-pill">AI Workflows</span>
+              <span class="tag-pill">Custom Agents</span>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Creative & Media -->
+          <div class="skill-pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                  <line x1="7" y1="2" x2="7" y2="22"></line>
+                  <line x1="17" y1="2" x2="17" y2="22"></line>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <line x1="2" y1="7" x2="7" y2="7"></line>
+                  <line x1="2" y1="17" x2="7" y2="17"></line>
+                  <line x1="17" y1="17" x2="22" y2="17"></line>
+                  <line x1="17" y1="7" x2="22" y2="7"></line>
+                </svg>
+              </div>
+              <h4>Creative Media</h4>
+              <p>Crafting high-retention video content, podcasts, commercials, and motion graphics for international brands.</p>
+            </div>
+            <div class="tags-cluster">
+              <span class="tag-pill">Video Editing</span>
+              <span class="tag-pill">Premiere Pro</span>
+              <span class="tag-pill">After Effects</span>
+              <span class="tag-pill">Canva</span>
+              <span class="tag-pill">Storytelling</span>
+              <span class="tag-pill">Color Grading</span>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Digital Strategy -->
+          <div class="skill-pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                  <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                </svg>
+              </div>
+              <h4>Digital Strategy</h4>
+              <p>Helping brands scale through tailored content funnels, conversion-oriented websites, and marketing campaigns.</p>
+            </div>
+            <div class="tags-cluster">
+              <span class="tag-pill">Content Strategy</span>
+              <span class="tag-pill">SEO</span>
+              <span class="tag-pill">WordPress</span>
+              <span class="tag-pill">Kajabi</span>
+              <span class="tag-pill">GoHighLevel</span>
+              <span class="tag-pill">Audience Growth</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 03: FEATURED PROJECTS
+         ----------------------------------------------------------------------- -->
+    <section id="projects" class="content-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-pill-tag">03 / Featured Projects</div>
+          <h2 class="section-title">
+            Crafted with precision, <span class="italic-accent">engineered for results.</span>
+          </h2>
+          <p class="section-desc">
+            A selection of recent production work highlighting problem-solving, architectural execution, and visual craft.
+          </p>
+        </div>
+
+        <div class="projects-list">
+          
+          
+
+          <!-- Project 1: STRICT — Responsive Portfolio & Agency Theme -->
+          <article class="project-showcase-card">
+            <div class="project-visual-side">
+              <img src="image/strict-project.png" alt="STRICT Minimalist Responsive Theme UI" class="project-preview-mockup" />
+            </div>
+            <div class="project-content-side">
+              <div>
+                <div class="project-category-badge">Modern Web Design • Clean &amp; Minimal Architecture</div>
+                <h3 class="project-title">STRICT — Minimalist Theme</h3>
+                <p class="project-summary">
+                  A modern, ultra-clean responsive portfolio and multipurpose theme designed with pixel-perfect simplicity, optimized performance, and pure aesthetics across all viewports.
+                </p>
+
+                <div class="project-deep-dive">
+                  <div class="dive-item">
+                    <span class="dive-label">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                      Concept
+                    </span>
+                    <p class="dive-text">Engineered around the philosophy of pure, distraction-free design that lets creative content speak with maximum visual clarity.</p>
+                  </div>
+
+                  <div class="dive-item">
+                    <span class="dive-label">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Highlights
+                    </span>
+                    <p class="dive-text">Responsive fluid layouts, crisp typography hierarchy, call-to-action sections, interactive showcase cards, and streamlined mobile navigation.</p>
+                  </div>
+                </div>
+
+                <div class="tags-cluster">
+                  <span class="tag-pill">HTML5</span>
+                  <span class="tag-pill">CSS3</span>
+                  <span class="tag-pill">JavaScript</span>
+                  <span class="tag-pill">Responsive Design</span>
+                  <span class="tag-pill">UI/UX</span>
+                </div>
+              </div>
+
+              <div class="project-footer-row">
+                <div class="project-links">
+                  <a href="https://strict-livid.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-pill-sm btn-black">
+                    <span>Live Demo</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://github.com/Nasir-Yousuf/strict" target="_blank" rel="noopener noreferrer" class="btn-pill-sm btn-outline">
+                    <span>GitHub Code</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Trovol — World Travel & Tour Experience -->
+          <article class="project-showcase-card reverse-layout">
+            <div class="project-visual-side">
+              <img src="image/tamai-project.png" alt="Trovol World Travel Web Application UI" class="project-preview-mockup" />
+            </div>
+            <div class="project-content-side">
+              <div>
+                <div class="project-category-badge">Travel &amp; Hospitality • Interactive Booking Experience</div>
+                <h3 class="project-title">Trovol — World Travel Platform</h3>
+                <p class="project-summary">
+                  A high-impact web application crafted for world explorers, destination packages, multi-language internationalization, and seamless travel inquiries.
+                </p>
+
+                <div class="project-deep-dive">
+                  <div class="dive-item">
+                    <span class="dive-label">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                      Concept
+                    </span>
+                    <p class="dive-text">Immersive hero slider, curated destination cards, package price discovery, and rapid customer booking lead conversion flows.</p>
+                  </div>
+
+                  <div class="dive-item">
+                    <span class="dive-label">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Highlights
+                    </span>
+                    <p class="dive-text">Venice &amp; world destination showcases, responsive banner sliders, client testimonials, and dedicated contact integration.</p>
+                  </div>
+                </div>
+
+                <div class="tags-cluster">
+                  <span class="tag-pill">JavaScript</span>
+                  <span class="tag-pill">HTML5</span>
+                  <span class="tag-pill">CSS3</span>
+                  <span class="tag-pill">Slider UI</span>
+                  <span class="tag-pill">Booking Flow</span>
+                </div>
+              </div>
+
+              <div class="project-footer-row">
+                <div class="project-links">
+                  <a href="https://27-tamai-s.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-pill-sm btn-black">
+                    <span>Live Demo</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://github.com/Nasir-Yousuf/lucid" target="_blank" rel="noopener noreferrer" class="btn-pill-sm btn-outline">
+                    <span>GitHub Code</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Lucid — Beautiful Product Landing Page -->
+          <article class="project-showcase-card">
+            <div class="project-visual-side">
+              <img src="image/lucid-class-project.png" alt="Lucid Product Landing Theme UI" class="project-preview-mockup" />
+            </div>
+            <div class="project-content-side">
+              <div>
+                <div class="project-category-badge">Product Showcase • Dark Mode UI Architecture</div>
+                <h3 class="project-title">Lucid — One Page Theme</h3>
+                <p class="project-summary">
+                  A carefully crafted dark-mode application landing page built to present digital software, mobile applications, and products with sleek elegance.
+                </p>
+
+                <div class="project-deep-dive">
+                  <div class="dive-item">
+                    <span class="dive-label">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                      Concept
+                    </span>
+                    <p class="dive-text">High-contrast dark theme emphasizing device mockups, feature breakdowns, and conversion-optimized call-to-action buttons.</p>
+                  </div>
+
+                  <div class="dive-item">
+                    <span class="dive-label">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Highlights
+                    </span>
+                    <p class="dive-text">Dual mobile device 3D mockups, responsive feature matrix, testimonial sliders, pricing tables, and clean contact channels.</p>
+                  </div>
+                </div>
+
+                <div class="tags-cluster">
+                  <span class="tag-pill">HTML5</span>
+                  <span class="tag-pill">CSS3</span>
+                  <span class="tag-pill">JavaScript</span>
+                  <span class="tag-pill">Dark Mode UI</span>
+                  <span class="tag-pill">Product Landing</span>
+                </div>
+              </div>
+
+              <div class="project-footer-row">
+                <div class="project-links">
+                  <a href="https://lucid-class-project-iige.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-pill-sm btn-black">
+                    <span>Live Demo</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://github.com/Nasir-Yousuf/lucid-class-project" target="_blank" rel="noopener noreferrer" class="btn-pill-sm btn-outline">
+                    <span>GitHub Code</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Forest at Home -->
+          <article class="project-showcase-card reverse-layout">
+            <div class="project-visual-side">
+              <img src="image/forest-at-home.png" alt="Forest at Home E-Commerce UI" class="project-preview-mockup" />
+            </div>
+            <div class="project-content-side">
+              <div>
+                <div class="project-category-badge">MERN E-Commerce • Interactive Experience</div>
+                <h3 class="project-title">Forest at Home</h3>
+                <p class="project-summary">
+                  A modern, interactive e-commerce web application for purchasing indoor plants, featuring a nature-inspired design system and fluid motion.
+                </p>
+
+                <div class="project-deep-dive">
+                  <div class="dive-item">
+                    <span class="dive-label">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                      Problem
+                    </span>
+                    <p class="dive-text">Standard plant shops look like rigid grid spreadsheets rather than organic spaces where botanical enthusiasts feel immersed.</p>
+                  </div>
+
+                  <div class="dive-item">
+                    <span class="dive-label">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Solution
+                    </span>
+                    <p class="dive-text">Constructed a full MERN stack app with an animated botanical homepage, interactive filtering catalog, and an administrative CMS for inventory control.</p>
+                  </div>
+
+                  <div class="admin-credentials-pill">
+                    <span>Admin Demo: demo@admin.com / admin123</span>
+                  </div>
+                </div>
+
+                <div class="tags-cluster">
+                  <span class="tag-pill">React (Vite)</span>
+                  <span class="tag-pill">Tailwind CSS</span>
+                  <span class="tag-pill">Framer Motion</span>
+                  <span class="tag-pill">Node.js</span>
+                  <span class="tag-pill">Express.js</span>
+                  <span class="tag-pill">MongoDB</span>
+                </div>
+              </div>
+
+              <div class="project-footer-row">
+                <div class="project-links">
+                  <a href="https://forest-at-home.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-pill-sm btn-black">
+                    <span>Live Demo</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://github.com/Nasir-Yousuf/Forest-At-Home" target="_blank" rel="noopener noreferrer" class="btn-pill-sm btn-outline">
+                    <span>View Code</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Video Editing Portfolio -->
+          <article class="project-showcase-card">
+            <div class="project-visual-side">
+              <img src="image/video-portfolio.jpg" alt="Video Editing Portfolio Showcase" class="project-preview-mockup" />
+            </div>
+            <div class="project-content-side">
+              <div>
+                <div class="project-category-badge">Creative Direction • Motion &amp; Retention</div>
+                <h3 class="project-title">Video Editing Portfolio</h3>
+                <p class="project-summary">
+                  Professional editing across multiple formats with an obsessive focus on narrative pacing, audience retention psychology, and aesthetic polish.
+                </p>
+
+                <div class="project-deep-dive">
+                  <div class="dive-item">
+                    <span class="dive-label">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"></polygon></svg>
+                      Key Milestones &amp; Formats
+                    </span>
+                    <p class="dive-text">🎬 <strong>300+ edited videos</strong> • 🌍 <strong>Clients from USA, UK &amp; Canada</strong> • 🎙 <strong>Podcast Production</strong> • 📱 <strong>Shorts &amp; Reels</strong> • ✨ <strong>Motion Graphics</strong> • 🎨 <strong>Color Grading</strong></p>
+                  </div>
+                </div>
+
+                <div class="tags-cluster">
+                  <span class="tag-pill">Premiere Pro</span>
+                  <span class="tag-pill">After Effects</span>
+                  <span class="tag-pill">Motion Graphics</span>
+                  <span class="tag-pill">Vlogs</span>
+                  <span class="tag-pill">Reels</span>
+                  <span class="tag-pill">Commercial Shorts</span>
+                </div>
+              </div>
+
+              <div class="project-footer-row">
+                <div class="project-links">
+                  <a href="https://drive.google.com/drive/folders/1vlSyBN_6Zwb5t3wyKVb284HjxRm4pjOF?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-pill-sm btn-black">
+                    <span>Explore Google Drive</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <button class="btn-pill-sm btn-outline" data-open-modal="video-modal">
+                    <span>Quick Reel Info</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: NovaCV — AI-Powered Resume Builder -->
+          <article class="project-showcase-card reverse-layout">
+            <div class="project-visual-side">
+              <img src="image/create-cv.png" alt="NovaCV AI-Powered Resume Builder UI" class="project-preview-mockup" />
+            </div>
+            <div class="project-content-side">
+              <div>
+                <div class="project-category-badge">Web Application • Career Tech &amp; AI Workflow</div>
+                <h3 class="project-title">NovaCV — AI Resume Builder</h3>
+                <p class="project-summary">
+                  An intuitive, AI-powered professional CV and resume builder designed to help job seekers generate modern, ATS-friendly resumes with live real-time preview and instant PDF export.
+                </p>
+
+                <div class="project-deep-dive">
+                  <div class="dive-item">
+                    <span class="dive-label">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                      Problem
+                    </span>
+                    <p class="dive-text">Creating well-formatted, ATS-compliant CVs is time-consuming and often hindered by complex design software or expensive paywalled templates.</p>
+                  </div>
+
+                  <div class="dive-item">
+                    <span class="dive-label">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Solution
+                    </span>
+                    <p class="dive-text">Developed a dynamic web tool featuring section-by-section input wizards, real-time styling themes, AI assistance, and single-click professional export.</p>
+                  </div>
+                </div>
+
+                <div class="tags-cluster">
+                  <span class="tag-pill">JavaScript</span>
+                  <span class="tag-pill">Tailwind CSS</span>
+                  <span class="tag-pill">HTML5</span>
+                  <span class="tag-pill">PDF Generation</span>
+                  <span class="tag-pill">Responsive UI</span>
+                </div>
+              </div>
+
+              <div class="project-footer-row">
+                <div class="project-links">
+                  <a href="https://create-cv-518.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-pill-sm btn-black">
+                    <span>Live Demo</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://github.com/Nasir-Yousuf/create-cv" target="_blank" rel="noopener noreferrer" class="btn-pill-sm btn-outline">
+                    <span>GitHub Code</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 04: EXPERIENCE & ACHIEVEMENTS
+         ----------------------------------------------------------------------- -->
+    <section id="experience" class="content-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-pill-tag">04 / Experience</div>
+          <h2 class="section-title">
+            Leadership, <span class="italic-accent">agencies &amp; achievements.</span>
+          </h2>
+          <p class="section-desc">
+            Proven track record of driving content strategy, founding creative ventures, and rigorous competitive problem-solving.
+          </p>
+        </div>
+
+        <div class="experience-layout">
+          
+          <!-- Experience Cards -->
+          <div class="experience-cards-col">
+            <div class="experience-card">
+              <div class="exp-top-row">
+                <span class="exp-role">Content Head</span>
+                <span class="exp-period">2023 — Present</span>
+              </div>
+              <div class="exp-company">Social Tamai</div>
+              <p class="exp-desc">
+                Leading multi-channel content strategy, managing creative and video editing teams, and overseeing end-to-end production pipelines to elevate brand identity and digital engagement.
+              </p>
+            </div>
+
+            <div class="experience-card">
+              <div class="exp-top-row">
+                <span class="exp-role">Founder</span>
+                <span class="exp-period">2021 — 2023</span>
+              </div>
+              <div class="exp-company">PixelMidea</div>
+              <p class="exp-desc">
+                Founded and directed a digital creative agency delivering premium video assets, UI/UX design systems, and targeted marketing campaigns for emerging businesses and creators.
+              </p>
+            </div>
+          </div>
+
+          <!-- Achievements Sidebar Grid -->
+          <div class="achievements-grid">
+            
+            <div class="achievement-card">
+              <div class="achievement-icon-box">🏆</div>
+              <div class="achievement-info">
+                <h5>First Place Chess Championship</h5>
+                <p>Awarded 1st place in inter-college competitive chess tournament.</p>
+              </div>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-icon-box">📜</div>
+              <div class="achievement-info">
+                <h5>Google AI Certificate</h5>
+                <p>Certified in core Generative AI principles &amp; applications.</p>
+              </div>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-icon-box">🎓</div>
+              <div class="achievement-info">
+                <h5>Andrew Ng AI for Everyone</h5>
+                <p>DeepLearning.AI foundational certification on AI workflows.</p>
+              </div>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achievement-icon-box">⚡</div>
+              <div class="achievement-info">
+                <h5>Adobe Creative Cloud Experience</h5>
+                <p>Extensive production proficiency across Premiere &amp; After Effects.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 05: LEARNING JOURNEY (2021 — 2026)
+         ----------------------------------------------------------------------- -->
+    <section id="journey" class="content-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-pill-tag">05 / Evolution</div>
+          <h2 class="section-title">
+            The Learning Journey, <span class="italic-accent">year by year.</span>
+          </h2>
+          <p class="section-desc">
+            A continuous trajectory driven by insatiable curiosity, intellectual rigor, and the passion to build better systems.
+          </p>
+        </div>
+
+        <div class="journey-timeline-grid">
+          
+          <!-- 2021 -->
+          <div class="journey-year-card">
+            <div>
+              <div class="journey-year-top">
+                <span class="year-stamp">2021</span>
+                <span class="year-theme-pill">Foundations</span>
+              </div>
+              <h5>Creative Foundations</h5>
+              <p class="focus-note">Focus: Building creative communication &amp; visual storytelling.</p>
+              <div class="journey-tag-row">
+                <span class="journey-tag">Premiere Pro</span>
+                <span class="journey-tag">After Effects</span>
+                <span class="journey-tag">Photoshop</span>
+              </div>
+            </div>
+            <p class="journey-takeaway">
+              Learned visual storytelling, pacing, editing for diverse audiences, and creating engaging digital experiences.
+            </p>
+          </div>
+
+          <!-- 2022 -->
+          <div class="journey-year-card">
+            <div>
+              <div class="journey-year-top">
+                <span class="year-stamp">2022</span>
+                <span class="year-theme-pill">Web Dev</span>
+              </div>
+              <h5>Web Foundations</h5>
+              <p class="focus-note">Focus: Learning to build for the modern open web.</p>
+              <div class="journey-tag-row">
+                <span class="journey-tag">HTML5</span>
+                <span class="journey-tag">CSS3</span>
+                <span class="journey-tag">JavaScript</span>
+                <span class="journey-tag">Git</span>
+              </div>
+            </div>
+            <p class="journey-takeaway">
+              Mastered semantic markup, CSS responsive principles, DOM manipulation, and writing maintainable code.
+            </p>
+          </div>
+
+          <!-- 2023 -->
+          <div class="journey-year-card">
+            <div>
+              <div class="journey-year-top">
+                <span class="year-stamp">2023</span>
+                <span class="year-theme-pill">Frontend</span>
+              </div>
+              <h5>Modern Frontend</h5>
+              <p class="focus-note">Focus: Building real-world reactive web applications.</p>
+              <div class="journey-tag-row">
+                <span class="journey-tag">React</span>
+                <span class="journey-tag">Redux</span>
+                <span class="journey-tag">Firebase</span>
+                <span class="journey-tag">Blood App</span>
+              </div>
+            </div>
+            <p class="journey-takeaway">
+              Grasped component lifecycles, state management, auth systems, and developing production interfaces.
+            </p>
+          </div>
+
+          <!-- 2024 -->
+          <div class="journey-year-card">
+            <div>
+              <div class="journey-year-top">
+                <span class="year-stamp">2024</span>
+                <span class="year-theme-pill">Growth</span>
+              </div>
+              <h5>Professional Impact</h5>
+              <p class="focus-note">Focus: Turning technical skills into business value.</p>
+              <div class="journey-tag-row">
+                <span class="journey-tag">Content Head</span>
+                <span class="journey-tag">PixelMidea</span>
+                <span class="journey-tag">Client Apps</span>
+              </div>
+            </div>
+            <p class="journey-takeaway">
+              Strengthened leadership, client communication, creative direction, and professional project management.
+            </p>
+          </div>
+
+          <!-- 2025 -->
+          <div class="journey-year-card">
+            <div>
+              <div class="journey-year-top">
+                <span class="year-stamp">2025</span>
+                <span class="year-theme-pill">AI &amp; Next</span>
+              </div>
+              <h5>AI &amp; Next.js Systems</h5>
+              <p class="focus-note">Focus: Preparing for next-generation intelligent software.</p>
+              <div class="journey-tag-row">
+                <span class="journey-tag">Next.js</span>
+                <span class="journey-tag">Python</span>
+                <span class="journey-tag">LLM APIs</span>
+                <span class="journey-tag">Google AI</span>
+              </div>
+            </div>
+            <p class="journey-takeaway">
+              Studied how LLMs function under the hood, prompt design, and integrating AI into modern web applications.
+            </p>
+          </div>
+
+          <!-- 2026 -->
+          <div class="journey-year-card">
+            <div>
+              <div class="journey-year-top">
+                <span class="year-stamp">2026</span>
+                <span class="year-theme-pill">Strategy</span>
+              </div>
+              <h5>Strategic Thinking</h5>
+              <p class="focus-note">Focus: Becoming a sharper communicator, writer &amp; strategist.</p>
+              <div class="journey-tag-row">
+                <span class="journey-tag">Screenwriting</span>
+                <span class="journey-tag">Comedy Craft</span>
+                <span class="journey-tag">Game Theory</span>
+              </div>
+            </div>
+            <p class="journey-takeaway">
+              Studied Aaron Sorkin &amp; Steve Martin (MasterClass), Kunal Kamra comedy craft, and Game Theory decision systems.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 06: CONTACT / SAY HELLO
+         ----------------------------------------------------------------------- -->
+    <section id="contact" class="content-section">
+      <div class="container">
+        
+        <div class="contact-hero-wrapper">
+          
+          <!-- Contact Info Side -->
+          <div class="contact-info-side">
+            <div class="section-pill-tag">06 / Get In Touch</div>
+            <h3>Let's build something <span class="italic-accent">extraordinary.</span></h3>
+            <p>
+              Whether you have a Next.js project in mind, want to discuss AI integration, or need high-retention video production, my inbox is always open.
+            </p>
+
+            <div class="contact-pill-list">
+              <!-- Email with One-Click Copy -->
+              <a href="mailto:nasiryousuf200511@gmail.com" class="contact-method-pill" data-copy="nasiryousuf200511@gmail.com" title="Click to copy email">
+                <div class="contact-method-left">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <span>nasiryousuf200511@gmail.com</span>
+                </div>
+                <span class="copy-badge">Copy 📋</span>
+              </a>
+
+              <!-- WhatsApp -->
+              <a href="https://wa.me/8801816550751" target="_blank" rel="noopener noreferrer" class="contact-method-pill" title="Chat on WhatsApp">
+                <div class="contact-method-left">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  <span>WhatsApp: +880 1816 550751</span>
+                </div>
+                <span class="copy-badge">Chat 💬</span>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/nasir-yousuf200511/" target="_blank" rel="noopener noreferrer" class="contact-method-pill">
+                <div class="contact-method-left">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <span>LinkedIn Profile</span>
+                </div>
+                <span class="copy-badge">Connect ↗</span>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/Nasir-Yousuf/" target="_blank" rel="noopener noreferrer" class="contact-method-pill">
+                <div class="contact-method-left">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub Repository</span>
+                </div>
+                <span class="copy-badge">Explore ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-side">
+            <form id="portfolio-contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="form-name">Your Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Sarah Jenkins" required />
+              </div>
+
+              <div class="form-group">
+                <label for="form-email">Your Email</label>
+                <input type="email" id="form-email" class="form-input" placeholder="sarah@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject">Subject / Inquiry Type</label>
+                <select id="form-subject" class="form-select">
+                  <option value="Next.js Web Development">Next.js Web Application</option>
+                  <option value="AI Integration & Workflows">AI Integration &amp; Workflows</option>
+                  <option value="Video Editing & Motion Design">Video Editing &amp; Production</option>
+                  <option value="Full-Time / Contract Opportunity">Full-Time / Contract Opportunity</option>
+                  <option value="General Conversation">Saying Hello</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Your Message</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project, goals, or timeline..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 14px 24px;">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SITE FOOTER
+         ----------------------------------------------------------------------- -->
+    <footer class="site-footer">
+      <div class="container">
+        
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h4>Nasir Yousuf®</h4>
+            <p>Building modern web applications and exploring AI to solve real-world problems.</p>
+          </div>
+
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="https://github.com/Nasir-Yousuf/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/nasir-yousuf200511/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-bottom">
+          <div id="dhaka-live-clock" class="live-clock-widget">
+            🇧🇩 Dhaka, BD: 09:30:00 PM (GMT+6)
+          </div>
+
+          <p class="copyright-notice">
+            © 2026 Nasir Yousuf. All rights reserved.
+          </p>
+
+          <a href="#home" class="btn-back-to-top" aria-label="Back to top of page">
+            <span>Top</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+          </a>
+        </div>
+
+      </div>
+    </footer>
+
+  </div><!-- /.app-frame -->
+
+  <!-- -----------------------------------------------------------------------
+       VIDEO SHOWCASE MODAL
+       ----------------------------------------------------------------------- -->
+  <div id="video-modal" class="site-modal" aria-hidden="true" role="dialog" aria-label="Video Showcase Modal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" data-close-modal aria-label="Close modal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div style="margin-bottom: 20px;">
+        <span class="project-category-badge">Video Production &amp; Motion Design</span>
+        <h3 style="font-family: var(--font-serif); font-size: 2rem; margin: 6px 0 12px 0;">300+ Videos Edited Worldwide</h3>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.5;">
+          I edit across multiple formats with an emphasis on hook dynamics, retention pacing, and sound design. From full-length podcasts to high-converting short-form reels.
+        </p>
+      </div>
+
+      <div style="border-radius: var(--radius-md); overflow: hidden; margin-bottom: 24px; border: 1px solid var(--border-light);">
+        <img src="image/video-portfolio.jpg" alt="Video Portfolio Preview" style="width: 100%; display: block;" />
+      </div>
+
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="https://drive.google.com/drive/folders/1vlSyBN_6Zwb5t3wyKVb284HjxRm4pjOF?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-primary" style="flex: 1; justify-content: center;">
+          <span>Open Full Drive Showcase</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+        <button class="btn-secondary" data-close-modal style="flex: 1; justify-content: center;">
+          <span>Close Preview</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- -----------------------------------------------------------------------
+       MOBILE NAVIGATION DRAWER
+       ----------------------------------------------------------------------- -->
+  <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-hidden="true">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <span class="brand-logo">Nasir Yousuf<span class="sup">®</span></span>
+      <button id="mobile-drawer-close" class="modal-close-btn" aria-label="Close mobile menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+      <li><a href="#journey" class="mobile-nav-link">Journey</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+
+    <div style="display: flex; gap: 12px; flex-direction: column;">
+      <a href="mailto:nasiryousuf200511@gmail.com" class="btn-primary" style="justify-content: center;">
+        <span>Say Hello ↗</span>
+      </a>
+      <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center;">© 2026 Nasir Yousuf</p>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-msg" class="toast-notification" aria-live="polite"></div>
+
+  <!-- Main JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
